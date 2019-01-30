@@ -1,0 +1,41 @@
+ng-hide {
+  display: none;
+}
+.highlightedText {
+  color: #c00;
+  /* font-weight: 900; */
+}
+.ngdialog.ngdialog-theme-plain.custom-width .ngdialog-content {
+  width: 1050px;
+}
+.pink {
+  background: #ddd;
+}
+.loader {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: bold;
+  width: 200px;
+  height: 36px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.select-page {
+  width: 50px;
+  text-align: center;
+}
+.pagination li a input {
+  padding: 0;
+  margin: -5px 0;
+}
+.st-sort-ascent:before {
+  content: '\25B2';
+}
+.st-sort-descent:before {
+  content: '\25BC';
+}

@@ -1,0 +1,75 @@
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div data-ng-controller="searchCtrl">
+					 <div class="loader" data-ng-hide="initialized">Loading...</div>
+                    <!-- 
+					<div class="row">
+						<form class="form-horizontal" role="form">
+							<div class="form-group">
+								<label class="col-sm-2 control-label">Input key words</label>
+								<div class="col-sm-8">
+									<input class="form-control" type="text"
+										data-ng-model="keywords" value="">
+								</div>
+							    
+								<button type="button" data-ng-click="search()"
+									class="btn btn-sm btn-success">
+									<i class="glyphicon glyphicon-search"> Search</i>
+								</button>							
+							</div>
+						</form>
+					</div>-->
+					
+					
+					
+					<div class="row">
+						<div data-ng-hide="initialized">
+								<rd-loading></rd-loading>
+						</div>
+						
+						<table st-table="displayedCollection" st-safe-src="results" class="table table-striped">
+						<thead>
+							<tr>
+								<th colspan="5"><input st-search placeholder="global search" class="input-sm form-control" type="search"></th>
+							</tr>
+							<tr>
+								<th st-ratio="20" st-sort="team">Team</th>
+								<th st-ratio="20" st-sort="project">Project</th>
+								<th st-ratio="20" ng-hide="true" st-sort="saml">Saml</th>								
+								<th st-ratio="40">Options</th>							
+							</tr>						
+						</thead>
+						<tbody>
+							<tr ng-repeat="row in displayedCollection">
+								<td st-ratio="20">{{row.team}}</td>
+								<td st-ratio="20">{{row.project}}</td>
+								<td st-ratio="20" ng-hide="true">{{row.saml}}</td>									
+								<td st-ratio="40">								
+								<button type="button" data-ng-click="view(row)" class="btn btn-sm btn-info">
+									<i class="glyphicon glyphicon-search"> view</i>
+								</button>
+								<button type="button" data-ng-click="edit(row)" class="btn btn-sm btn-success">
+									<i class="glyphicon glyphicon-pencil"> Edit</i>
+								</button>
+								
+								</td>							
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="5" class="text-center">
+									<div st-items-by-page="10" st-pagination="" st-template="templates/layout/pagination.custom.html"></div>
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

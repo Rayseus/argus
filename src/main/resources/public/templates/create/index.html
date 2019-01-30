@@ -1,0 +1,43 @@
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div data-ng-controller="createCtrl">
+					<div class="row">
+						<div class="col-md-12">
+							<form role="form">
+								<div class="form-group">
+									<input type="text" class="form-control" data-ng-model="id" data-ng-hide="true" rows="3"> <label for="name">Team
+										name</label> <input type="text" class="form-control" data-ng-model="team" rows="3">
+								</div>
+
+								<div class="form-group">
+									<label for="project">Project name</label> <input type="text" class="form-control" data-ng-model="project" rows="3">
+								</div>
+
+								<div class="form-group">
+									<label for="name">input your SAM</label>
+									<textarea class="form-control" data-ng-model="saml" rows="10"></textarea>
+								</div>
+								<button type="button" data-ng-click="create()" class="btn btn-sm btn-success">
+									<i class="glyphicon glyphicon-plus">{{update?"Update":"Create"}}</i>
+								</button>
+							</form>
+						</div>
+
+					</div>
+					<div class="col-md-12">
+						<div data-ng-show="thumb">
+							<img data-ng-src="{{thumb}}">
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-ng-show="update" data-ng-click="closeThisDialog(0)">close</button>
+			</div>
+
+		</div>
+	</div>
+</div>
